@@ -1,0 +1,34 @@
+<!-- Create.html -->
+    <h2 ng-show="recipe._id!=null">Edit</h2>
+    <h2 ng-hide="recipe._id!=null">Create</h2>
+    <hr>
+    <form name="recipeForm" ng-submit="saveData(recipe)" novalidate class="form-horizontal">
+        <div class="form-group">
+            <label class="col-md-2">Name</label>
+            <div class="col-md-10">
+                <input type="text" ng-model="recipe.name" name="name" ng-required="true" class="form-control" />
+                <p ng-show="recipeForm.name.$error.required && (recipeForm.$submitted || recipeForm.name.$dirty)" class="text-danger">Please Enter Name</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2">Ingridient</label>
+            <div class="col-md-10">
+                <textarea name="ingridients" ng-model="recipe.ingridients" ng-required="true" class="form-control"></textarea>
+                <p ng-show="recipeForm.ingridients.$error.required && (recipeForm.$submitted || recipeForm.ingridients.$dirty)" class="text-danger">Please Enter The Ingridients</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2">Procedure</label>
+            <div class="col-md-10">
+                <textarea ng-model="recipe.procedure" name="procedure" ng-required="true" class="form-control" ></textarea> 
+                <p ng-show="recipeForm.procedure.$error.required && (recipeForm.$submitted || recipeForm.procedure.$dirty)" class="text-danger">Please Enter The Recipe Steps</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Update" class="btn btn-primary" ng-show="recipe._id!=null" />
+                <input type="submit" value="Save" class="btn btn-primary" ng-hide="recipe._id!=null" />
+                <a ui-sref="recipes" class="btn btn-warning">Cancel</a>
+            </div>
+        </div>
+    </form>

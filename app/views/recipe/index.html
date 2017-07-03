@@ -1,0 +1,25 @@
+<!-- index.html -->
+    <h2>Recipe Listing</h2>
+
+    <table class="table" ng-if="recipes.length>0">
+        <tr>
+            <th>SNo.</th>
+            <th>Name</th>
+            <th>Ingridient</th>
+            <th>Procedure</th>
+            <th>Actions</th>
+        </tr>
+        <tr ng-repeat="recipe in recipes">
+            <td>{{recipe._id}}</td>
+            <td>{{recipe.name}}</td>
+            <td>{{recipe.ingridients}}</td>
+            <td>{{recipe.procedure}}</td>
+            <td>
+                <a ui-sref="edit({id:recipe._id})">Edit</a> |
+                <a href="#" ng-click="deleteRecipe(recipe._id)">Delete</a>
+            </td>
+        </tr>
+    </table>
+    <div ng-if="recipes.length==0">
+        No record found !!
+    </div>

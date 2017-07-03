@@ -1,0 +1,32 @@
+{
+  "name": "angular-node-recipe",
+  "version": "1.0.0",
+  "description": "CRUD rest API para recetas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crack57ar/recipes.git"
+  },
+  "keywords": [
+    "mean",
+    "crud",
+    "operations"
+  ],
+  "author": "miguel valdez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crack57ar/recipes/issues"
+  },
+  "homepage": "https://github.com/crack57ar/recipes#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "mongoose": "~4.4.0"
+  }
+}
